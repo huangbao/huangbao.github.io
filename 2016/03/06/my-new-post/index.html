@@ -1,16 +1,13 @@
 
-  
-    <!DOCTYPE HTML>
+ <!DOCTYPE HTML>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   
-    <title>about me | huangbao&#39;s blog</title>
+    <title>my new post | huangbao&#39;s blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="huangbao">
-    
-    <meta name="description" content="android开发博客">
     
     
     
@@ -25,9 +22,9 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
-      <body>
-        <header>
-          <div>
+  <body>
+    <header>
+      <div>
 		
 			<div id="textlogo">
 				<h1 class="site-name"><a href="/" title="huangbao&#39;s blog">huangbao&#39;s blog</a></h1>
@@ -57,37 +54,34 @@
 			</nav>			
 </div>
 
-        </header>
-        <div id="container">
-          <div id="main" class="page" itemscope itemprop="blogPost">
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
 	<article itemprop="articleBody"> 
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/about/index.html" title="about me" itemprop="url">about me</a>
+      <a href="/2016/03/06/my-new-post/" title="my new post" itemprop="url">my new post</a>
   </h1>
   <p class="article-author">By
     
       <a href="http://yoursite.com" title="huangbao">huangbao</a>
     </p>
   <p class="article-time">
-    <time datetime="2016-03-06T06:57:03.000Z" itemprop="datePublished">2016-03-06</time>
-    更新日期:<time datetime="2016-03-06T07:24:57.235Z" itemprop="dateModified">2016-03-06</time>
+    <time datetime="2016-03-06T07:32:34.000Z" itemprop="datePublished">2016-03-06</time>
+    更新日期:<time datetime="2016-03-06T07:32:34.243Z" itemprop="dateModified">2016-03-06</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
 		
-		<p>Name：黄宝，EN：json，90后,一名行走在极客路上的小码农，现居深圳宝安区，在软件产业基地给某公司干活。兴趣广泛，音乐电影美剧等，喜欢折腾技术和有趣的东西，乐于尝试新鲜的事物。</p>
-<p><strong>Programming Languages </strong></p>
-<p>java，python，java script</p>
-<p><strong>Professional skills  </strong></p>
-<p>android ,struts，spring，hibernate，mybatis，spring mvc，oracle，mysql，svn，linux，json，ajax… </p>
-<p><strong>Contact  </strong></p>
-<p>QQ：591513091 </p>
-<p>Email：591513091json@gmail.com </p>
-  
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+		</div>
+		
+		  
 	</div>
 		<footer class="article-footer clearfix">
 
@@ -96,21 +90,55 @@
 
 <div class="article-share" id="share">
 
-  <div data-url="http://yoursite.com/about/index.html" data-title="about me | huangbao&#39;s blog" data-tsina="null" class="share clearfix">
+  <div data-url="http://yoursite.com/2016/03/06/my-new-post/" data-title="my new post | huangbao&#39;s blog" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
 </footer>   	       
 	</article>
 	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2016/03/05/hello-world/"  title="Hello World">
+ <strong>NEXT:</strong><br/> 
+ <span>Hello World
+</span>
+</a>
+</div>
+
+</nav>
+
 	
 <section class="comment">
 	<div class="ds-thread"></div>
 </section>
 
 </div>  
-        </div>
-        <footer><div id="footer" >
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+  
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+
+  
+
+  <div class="rsspart">
+	<a href="null" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
 	
 	<div class="line">
 		<span></span>
@@ -132,7 +160,7 @@
 		</p>
 </div>
 </footer>
-        <script src="/js/jquery-2.1.0.min.js"></script>
+    <script src="/js/jquery-2.1.0.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){ 
   $('.navbar').click(function(){
@@ -159,6 +187,8 @@ $(document).ready(function(){
       m.removeClass('moveMain');
       a.css('display', 'block').removeClass('fadeOut');
       o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
         
     }
   });
@@ -175,6 +205,38 @@ $(document).ready(function(){
   $(window).scroll(function(){
     o.css("top",Math.max(80,260-$(this).scrollTop()));
   });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
 });
 </script>
 
@@ -224,6 +286,5 @@ $(document).ready(function(){
 
 
 
-      </body>
-     </html>
-     
+  </body>
+</html>
